@@ -5,20 +5,21 @@
 // TOKS
 #define NONEC (char)0
 
-#define INT "INT"
-#define FLOAT "FLOAT"
+constexpr std::string_view INT = "INT";
+constexpr std::string_view FLOAT = "FLOAT";
 
-#define ID "ID"
+constexpr std::string_view ID = "ID";
 
-#define ADD "ADD"
-#define SUB "SUB"
-#define MUL "MUL"
-#define DIV "DIV"
-#define MOD "MOD"
-#define EQL "EQL"
-#define LPAR "LPAR"
-#define RPAR "RPAR"
-#define ERR "ERR"
+constexpr std::string_view ADD = "ADD";
+constexpr std::string_view SUB = "SUB";
+constexpr std::string_view MUL = "MUL";
+constexpr std::string_view DIV = "DIV";
+constexpr std::string_view MOD = "MOD";
+constexpr std::string_view EQL = "EQL";
+constexpr std::string_view LPAR = "LPAR";
+constexpr std::string_view RPAR = "RPAR";
+constexpr std::string_view ERR = "ERR";
+
 
 using namespace std;
 
@@ -27,7 +28,7 @@ class Token {
     string type;
     string value;
 
-    Token(string type, string value = ""){
+    Token(string_view type, string value = ""){
         this->type = type;
         this->value = value;
     }
